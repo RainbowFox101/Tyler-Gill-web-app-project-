@@ -1,0 +1,314 @@
+@charset "UTF-8";
+/* CSS Document */
+#buttons {
+	/*background-color: rgba(0,0,0,0.00);*/
+	float: left;
+	width: 80%;
+	height: auto;
+}
+.map_button {
+	height: 45px;
+	width: 45px;
+	background-color: rgba(96,96,96,0.10);
+	border: thick;
+	border-radius: 4px;
+}
+/*Hunting Stuff*/
+#huntingScreen {
+		border: groove;
+		border-radius: 5px;
+		border-width: 5px;
+		border-color: green;
+		width: 80%;
+		height: 360px;
+		background-color: brown;
+}
+#huntingInterface {
+		border: ridge;
+		border-radius: 5px;
+		border-width: 3px;
+		border-color: darkred;
+		width: 90%;
+		float: right;
+		margin-right: 32px;
+		height: 65%;
+		background-color: rgba(53,206,62,1.00);
+}
+#huntingText {
+		border: ridge;
+		border-radius: 5px;
+		border-width: 3px;
+		border-color: black;
+		width: 94%;
+		float: right;
+		margin-right: 16px;
+		height: auto;
+		background-color: white;
+}
+#player {
+		border: ridge;
+		border-radius: 5px;
+		border-width: 3px;
+		border-color: black;
+		width: 46%;
+		float: left;
+		margin-right: 16px;
+		margin-top: 5%;
+		height: 140px;
+		background-color: white;
+}
+#enemy {
+		border: ridge;
+		border-radius: 5px;
+		border-width: 3px;
+		border-color: black;
+		width: 46%;
+		float: right;
+		margin-right: 16px;
+		height: 140px;
+		background-color: white;
+}
+#huntingButtons {
+		border: ridge;
+		border-radius: 5px;
+		border-width: 3px;
+		border-color: darkred;
+		width: 95%;
+		float: right;
+		margin-right: 16px;
+		height: 30%;
+		background-color: rgba(129,103,30,1.00);
+}
+.dArmor {
+		background-image: url(images/DiamondArmor.png);
+}
+.iArmor {
+		background-image: url(images/IronArmor.png);
+}
+.lArmor {
+		background-image: url(images/LeatherArmor.png);
+}
+.bear {
+	
+}
+.wolf {
+	
+}
+.goblin {
+	
+}
+.dragon {
+	
+}
+/*Inventory*/
+#inventory {
+	float: right;
+	width: 19%;
+	height: 98%;
+	text-align: center;
+	border: medium;
+}
+.inventoryitem {
+	border-color: black;
+	color: black;
+	height: 10px;
+	background-color: white;
+}
+#body {
+		width: auto;
+		height: 95%;
+}
+#textbox {
+	width: 18%;
+	height: 550px;
+	padding: 5px;
+	float: left;
+}
+#screen_selector {
+	width: 75%;
+	height: auto;
+	padding: 25px;
+	float: right;
+}
+#areaImage {
+	background-image: url(images/backgroundMap.jpg)	;
+	background-size:100%;
+}
+#crafting {
+	color: white;
+	font-size: 12px;
+	height: 75px;
+	width: 75px;
+	background-image: url(images/crafting.png);
+	background-size: 100%
+	
+}
+#village {
+	color: black;
+	font-size:13px;
+	width: 100px;
+	height: 50px;
+	background-image: url(images/village.png);
+	background-size: 100%
+	
+}
+#area {
+	color: white;
+	font-size: 13px;
+	height: 50px;
+	width: 100px;
+	background-image: url(images/area.png);
+	background-size: 190%
+	
+}
+#cave {
+	color: white;
+	font-size:13px;
+	width: 100px;
+	height: 50px;
+	background-image: url(images/cave.png);
+	background-size: 160%
+	
+}
+#screen {	
+	width: 75%;
+	height: auto;
+	padding: 25px;
+	right: 10px;
+	float: right;
+}
+#footer {
+	padding: 5px;
+	clear: both;
+	height: 30px;
+}
+.Day {
+	background-color: gray;	
+	border: medium;
+	border-radius: 7px;
+}
+.Night {
+	background-color: lightgray;	
+	border: medium;
+	border-radius: 7px;
+}
+/*buttons*/
+
+.button {
+		border-radius: 6px;
+		font-size: 10px;
+		
+}
+.light {
+		color: black;
+		background-color: white;
+		border-left-color: #D4D4D4;
+		border-top-color: #D4D4D4;
+		border-right-color: #A8A8A8;
+		border-bottom-color: #A8A8A8;
+}
+.lightDiv {
+	background-color: lightgrey;
+	border: ridge;
+	border-radius: 5px;
+	border-width: 3px;
+	border-color: grey;
+}
+
+.dark {
+		color: white;
+		background-color: black;
+		border-left-color: #454545;
+		border-top-color: #454545;
+		border-right-color: #404040;
+		border-bottom-color: #404040;
+}
+.darkDiv {
+	background-color: darkgrey;
+	border: ridge;
+	border-radius: 5px;
+	border-width: 3px;
+	border-color: white;
+}
+
+/*   Screen Stuff   */
+
+@media screen and (max-width: 980px)   {
+		#body {
+				width: 94%;
+			}
+		#screen {
+				width: 75%;
+			}
+		#textbox {
+				width: 20%;	
+		}
+	}
+	
+	@media screen and (max-width: 700px)  {
+			#screen, #textbox {
+					width: auto; 
+					float: none;
+			}
+			#screen_selector {
+				height: auto;
+			}
+	}
+	
+	@media screen and (max-width: 480px)  {
+			#screen_selector {
+				height: auto;
+			}
+	}
+	
+	@media only screen 
+	and (min-device-width: 320px)
+	and (max-device-width: 568px)  {
+			body {
+					font-size:40px;
+			}
+			#screen_selector {
+					height: auto;
+			}
+			#screen {
+					width: auto;
+			}
+			#textbox {
+					width: auto;
+					clear: both;
+			}
+			#textbox, #screen, #footer {
+					border-radius: 16px;
+					border-width: 8px;
+			}
+	}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}

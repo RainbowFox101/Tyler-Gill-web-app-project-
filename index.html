@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Web App</title>
+<!--Stylesheet-->
+<link rel="stylesheet" type="text/css" href="webapp.css">
+<!--JavaScript-->
+<script type="text/javascript" src="webapp.js"></script>
+<!--jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<body onLoad="screenChange(0);day();">
+<!--Add your HTML here-->
+<div id="body">
+	<div id="textbox" class="div">
+
+			<p id="text1"></p>
+			<p id="text2"></p>
+			<p id="text3"></p>
+			<p id="text4"></p>
+			<p id="text5"></p>
+			<p id="text6"></p>
+			<p id="text7"></p>
+			<p id="text8"></p>
+			<p id="text9"></p>
+			<p id="text10"></p>
+	</div>
+	<div id="screen_selector" class="div">
+		<input type="button" class="button" id="crafting" value="Crafting" onClick="screenChange(0)">
+		<input type="button" class="button" id="village" value="Village" onClick="screenChange(1)">
+		<input type="button" class="button" id="area" value="Area" onClick="screenChange(2)">
+		<input type="button" class="button" id="cave" value="cave" onClick="screenChange(3)">
+	</div>
+	<div id="screen" class="div">
+		<!--crafting-->
+
+		<div id="buttons" class="div">
+		<div class="dropdown">
+  <button  class="button crafting" onclick="startFire()">Start Fire</button>
+  <div class="dropdown-content">
+    <p>5 wood</p>
+  </div>
+</div>
+	<div class="dropdown">
+  <button  class="button crafting" onclick="makeTrap()">Make Trap</button>
+  <div class="dropdown-content">
+    <p>10 wood</p>
+  </div>
+</div>
+<div class="dropdown">
+  <button  class="button crafting" onclick="checkTraps()">Check Traps</button>
+  <div class="dropdown-content">
+    <p>At least 1 trap</p>
+  </div>
+</div>
+<div class="dropdown">
+  <button  class="button crafting" onclick="leather_armor()">Make Leather Armor</button>
+  <div class="dropdown-content">
+    <p>100 leather</p>
+  </div>
+</div>
+<div class="dropdown">
+  <button  class="button crafting" onclick="iron_armor()">Make Iron Armor</button>
+  <div class="dropdown-content">
+    <p>100 iron</p>
+  </div>
+</div>
+<div class="dropdown">
+  <button  class="button crafting" onclick="diamond_armor()">Make Diamond Armor</button>
+  <div class="dropdown-content">
+    <p>50 diamond</p>
+  </div>
+</div>
+<div class="dropdown">
+  <button  class="button crafting" onclick="woodSword()">Make Wooden Sword</button>
+  <div class="dropdown-content">
+    <p>10 wood</p>
+	<p>5 leather</p>
+  </div>
+</div>
+<div class="dropdown">
+  <button  class="button crafting" onclick="ironSword()">Make Iron Sword</button>
+  <div class="dropdown-content">
+	<p>10 iron</p>
+	<p>5 leather</p>
+  </div>
+</div>
+<div class="dropdown">
+  <button  class="button crafting" onclick="diamondSword()">Make Diamond Sword</button>
+  <div class="dropdown-content">
+    <p>10 diamond</p>
+	<p>5 leather</p>
+  </div>
+</div>
+<div class="dropdown">
+  <button  class="button crafting" onclick="trade()">Trading</button>
+  <div class="dropdown-content">
+    <p>Trade anything the villager asks you for if you have it</p>
+  </div>
+</div>
+<div class="dropdown">
+  <button  class="button crafting" onclick="makePickaxe()">Make Pickaxe</button>
+  <div class="dropdown-content">
+    <p>20 wood</p>
+	<p>5 leather</p>
+  </div>
+</div>
+<div class="dropdown">
+  <button  class="button crafting" onclick="makeHouse()">Make House</button>
+  <div class="dropdown-content">
+    <p>100 wood</p>
+  </div>
+</div>
+
+
+		<!--village-->
+<div class="dropdown">
+  <button  class="button village" onclick="grabWood()">Grab Wood</button>
+  <div class="dropdown-content">
+    <p>Plus 1 Wood</p>
+  </div>
+</div>
+<div class="dropdown">
+  <button  class="button village" onclick="iMiner(1)">+1</button>
+  <div class="dropdown-content">
+    <p>Costs 1 Villager</p>
+	<p>Automatically Gives Iron</p>
+  </div>
+</div>
+<div class="dropdown">
+  <button  class="button village" onclick="iMiner(-1)">-1</button>
+  <div class="dropdown-content">
+    <p>Gives Back 1 Villager</p>
+	<p>Costs 1 Iron Miner</p>
+  </div>
+</div>
+<input type="text" class="button village" value="Add iron miners" readonly>
+		<!--area-->
+			<table border="0" class="area" id="areaImage">
+			<caption>Map</caption>
+				<tbody>
+					<tr>
+						<td><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"></td>
+					</tr>
+					<tr>
+					<td><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"></td>
+					</tr>
+					<tr>
+					<td><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"></td>
+					</tr>
+					<tr>
+					<td><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"></td>
+					</tr>
+					<tr>
+				<td><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"></td>
+					</tr>
+					<tr>
+					<td><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"><input type="button" class="map_button"></td>
+					</tr>
+					<tr>
+					</tr>
+				</tbody>
+			</table>
+			<!--Hunting-->
+			<input type="button" class="button area" value="Hunting" onClick="hunting()">
+			<div id="huntingScreen">
+				<div id="huntingInterface" class="div">
+					<p id="huntingText"></p>
+					<div id="huntingImage" class="div">
+							<div id="player"></div>
+							<div id="enemy"></div>
+					</div>
+				</div>
+				<div id="huntingButtons">
+					<input type="button" class="button hunting" id="1" value="Melee Attack" onClick="attackM()">
+					<input type="button" class="button hunting" id="2" value="Ranged Attack" onClick="attackR()">
+					<input type="button" class="button hunting" id="3" value="Hide" onClick="hide()">
+					<input type="button" class="button hunting" id="4" value="Run" onClick="run()">
+				</div>
+			</div>
+		<!--cave-->
+		<div class="dropdown">
+  <button  class="button cave" onclick="screenChange(4)">Mine</button>
+  <div class="dropdown-content">
+    <p>Needs a Pickaxe</p>
+  </div>
+</div>
+	<div class="dropdown">
+  <button  class="button mine" onclick="get_Iron()">Get Iron</button>
+  <div class="dropdown-content">
+    <p>Costs 5 Pickaxe Durability</p>
+	<p>Gives you 1 iron</p>
+  </div>
+</div>
+	<div class="dropdown">
+  <button  class="button mine" onclick="get_diamond()">Get diamond</button>
+  <div class="dropdown-content">
+    <p>Costs 10 Pickaxe Durability</p>
+	<p>Gives you 1 diamond</p>
+  </div>
+</div>
+			</div>
+		<div id="inventory" class="div">
+		
+		<!--Inventory-->
+			<input id="wood" class="inventoryitem" readonly><br>
+			<input id="traps" class="inventoryitem" readonly><br>
+			<input id="fur" class="inventoryitem" readonly><br>
+			<input id="leather" class="inventoryitem" readonly><br>
+			<input id="diamonds" class="inventoryitem" readonly><br>
+			<input id="gems" class="inventoryitem" readonly><br>
+			<input id="iron" class="inventoryitem" readonly><br>
+			<input id="armor" class="inventoryitem" readonly><br>
+			<input id="pick_durab" class="inventoryitem" readonly><br>
+			<input id="house" class="inventoryitem" readonly><br>
+			<input id="pickaxe" class="inventoryitem" readonly><br>
+			<input id="villagers" class="inventoryitem" readonly><br>
+			<input id="ironMiners" class="inventoryitem" readonly><br>
+			<input id="weapon" class="inventoryitem" readonly>
+		</div>
+	</div>
+	<div id="footer" class="div">
+	<input type="button" value="day" class="Day" onClick="day()">
+	<input type="button" value="night" class="Night" onClick="night()">
+	</div>
+</div>
+</body>
+</html>
